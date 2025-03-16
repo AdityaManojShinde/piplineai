@@ -1,0 +1,8 @@
+# Ignore package-lock.json to prevent dependency conflicts
+package-lock.json
+
+# Ignore node_modules
+node_modules
+
+# Ignore .git directory
+.git 
