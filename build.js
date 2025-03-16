@@ -35,7 +35,7 @@ async function build() {
   
   // Install dependencies
   console.log('Installing dependencies...');
-  if (!exec('npm install')) {
+  if (!exec('npm install --legacy-peer-deps')) {
     process.exit(1);
   }
   
