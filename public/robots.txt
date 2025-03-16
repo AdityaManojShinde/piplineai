@@ -3,4 +3,5 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: /sitemap.xml 
+# After deployment, replace "your-project.vercel.app" with your actual Vercel domain
+Sitemap: https://your-project.vercel.app/sitemap.xml 

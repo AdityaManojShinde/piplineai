@@ -1,6 +1,15 @@
 import './globals.css';
 import type { Metadata } from 'next';
 
+// This function helps generate absolute URLs based on the environment
+function getBaseUrl() {
+  if (process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL}`;
+  }
+  // Default to localhost in development
+  return 'http://localhost:3000';
+}
+
 export const metadata: Metadata = {
   title: 'PipelineAI - Intelligent CI/CD Powered by AI',
   description: 'Revolutionize your development workflow with AI-driven CI/CD pipelines. Faster deployments, smarter testing, and automated optimization.',
@@ -8,9 +17,8 @@ export const metadata: Metadata = {
   authors: [{ name: 'PipelineAI Team' }],
   creator: 'PipelineAI',
   publisher: 'PipelineAI',
-  metadataBase: process.env.VERCEL_URL 
-    ? new URL(`https://${process.env.VERCEL_URL}`) 
-    : new URL('http://localhost:3000'),
+  // Using a function to determine the base URL
+  metadataBase: new URL(getBaseUrl()),
   alternates: {
     canonical: '/',
   },
@@ -23,6 +31,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
+        // This will be automatically prefixed with the metadataBase URL
         url: '/og-image.svg',
         width: 1200,
         height: 630,
@@ -34,6 +43,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'PipelineAI - Intelligent CI/CD Powered by AI',
     description: 'Revolutionize your development workflow with AI-driven CI/CD pipelines.',
+    // This will be automatically prefixed with the metadataBase URL
     images: ['/og-image.svg'],
   },
   icons: {

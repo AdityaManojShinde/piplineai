@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- 
+    After deployment, replace "your-project.vercel.app" with your actual Vercel domain
+    Example: If your site is deployed at pipelineai.vercel.app, use that instead
+  -->
   <url>
-    <loc>/</loc>
+    <loc>https://your-project.vercel.app/</loc>
     <lastmod>2024-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>/privacy-policy</loc>
+    <loc>https://your-project.vercel.app/privacy-policy</loc>
     <lastmod>2024-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>/terms-of-service</loc>
+    <loc>https://your-project.vercel.app/terms-of-service</loc>
     <lastmod>2024-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>/cookie-policy</loc>
+    <loc>https://your-project.vercel.app/cookie-policy</loc>
     <lastmod>2024-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
