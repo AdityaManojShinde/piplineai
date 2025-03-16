@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "buildCommand": "npm install --no-package-lock --force && npm run build",
+  "buildCommand": "node build.js",
   "devCommand": "npm run dev",
-  "installCommand": "npm install --no-package-lock --force",
+  "installCommand": false,
   "framework": "nextjs",
   "outputDirectory": ".next",
   "github": {
