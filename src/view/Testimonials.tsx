@@ -1,118 +1,86 @@
 'use client';
-
 import React from "react";
-import { Star, ArrowRight } from "../components/Icons";
+import Image from "next/image";
 
-interface TestimonialProps {
-  quote: string;
-  author: string;
-  role: string;
-  company: string;
-  delay?: number;
-}
+const testimonials = [
+  {
+    name: "Alice Johnson",
+    role: "CTO, TechNova",
+    quote: "PipelineAI has revolutionized our deployment process! We've seen a 40% reduction in deployment time and significantly fewer production issues.",
+    image: "/icons/avatar1.svg",
+    company: "TechNova",
+  },
+  { 
+    name: "Mark Williams", 
+    role: "Lead DevOps Engineer, CloudSphere",
+    quote: "A must-have for any dev team serious about CI/CD. The AI-powered testing has caught critical bugs that would have otherwise made it to production.",
+    image: "/icons/avatar2.svg",
+    company: "CloudSphere",
+  },
+  {
+    name: "Sarah Chen",
+    role: "Engineering Manager, DataFlow",
+    quote: "The intelligent pipeline suggestions have transformed how we approach our deployment strategy. Our team is more productive and our releases are more stable.",
+    image: "/icons/avatar3.svg",
+    company: "DataFlow",
+  },
+];
 
-const Testimonial: React.FC<TestimonialProps> = ({ quote, author, role, company, delay = 0 }) => (
-  <div className={`bg-gray-800 p-6 rounded-lg border border-gray-700 animate-fade-in animation-delay-${delay}`}>
-    <div className="flex text-yellow-400 mb-4">
-      <Star className="h-5 w-5" />
-      <Star className="h-5 w-5" />
-      <Star className="h-5 w-5" />
-      <Star className="h-5 w-5" />
-      <Star className="h-5 w-5" />
-    </div>
-    <blockquote className="text-gray-300 mb-4">"{quote}"</blockquote>
-    <div className="flex items-center">
-      <div className="h-10 w-10 rounded-full bg-gray-600 flex items-center justify-center text-white font-bold">
-        {author.charAt(0)}
-      </div>
-      <div className="ml-3">
-        <p className="text-white font-medium">{author}</p>
-        <p className="text-gray-400 text-sm">{role}, {company}</p>
-      </div>
-    </div>
-  </div>
-);
-
-const Testimonials: React.FC = () => {
-  const testimonials = [
-    {
-      quote: "PipelineAI has transformed our deployment process. We've reduced our build times by 45% and caught critical bugs before they reached production.",
-      author: "Sarah Johnson",
-      role: "CTO",
-      company: "TechNova",
-      delay: 0
-    },
-    {
-      quote: "The AI-powered test prioritization is a game-changer. Our CI pipeline is now 3x faster while maintaining the same level of confidence in our releases.",
-      author: "Michael Chen",
-      role: "DevOps Lead",
-      company: "DataSphere",
-      delay: 100
-    },
-    {
-      quote: "Setting up our CI/CD pipeline used to take weeks. With PipelineAI, we were up and running in hours with a better setup than we could have built ourselves.",
-      author: "Jessica Williams",
-      role: "Engineering Manager",
-      company: "CloudScale",
-      delay: 200
-    },
-    {
-      quote: "The insights provided by PipelineAI helped us identify bottlenecks we didn't even know existed. Our deployment frequency has doubled since implementation.",
-      author: "David Rodriguez",
-      role: "Lead Developer",
-      company: "Quantum Software",
-      delay: 300
-    },
-    {
-      quote: "As a startup, we needed a CI/CD solution that could grow with us. PipelineAI's scalable platform has been perfect, from our first MVP to our enterprise clients.",
-      author: "Emma Thompson",
-      role: "Founder",
-      company: "InnovateTech",
-      delay: 400
-    },
-    {
-      quote: "The security scanning features have caught several critical vulnerabilities that our previous tools missed. It's like having an extra security engineer on the team.",
-      author: "Robert Kim",
-      role: "Security Architect",
-      company: "SecureWave",
-      delay: 500
-    }
-  ];
-
+const Testimonials = () => {
   return (
-    <div id="testimonials" className="py-16 bg-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-base text-green-500 font-semibold tracking-wide uppercase animate-slide-left">Testimonials</h2>
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl animate-slide-right animation-delay-100">
-            Trusted by Innovative Teams
-          </p>
-          <p className="mt-4 max-w-2xl text-xl text-gray-400 mx-auto animate-fade-in animation-delay-200">
-            See what our customers are saying about how PipelineAI has transformed their development workflows.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((testimonial, index) => (
-            <Testimonial 
+    <section id="testimonials" className="py-16 bg-gray-900 relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-10 left-10 w-20 h-20 rounded-full bg-green-500"></div>
+        <div className="absolute bottom-10 right-10 w-32 h-32 rounded-full bg-blue-500"></div>
+        <div className="absolute top-1/2 left-1/3 w-16 h-16 rounded-full bg-purple-500"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
+        <h2 className="text-4xl font-extrabold text-white mb-3 animate-fade-in">
+          What Our Clients Say
+        </h2>
+        <p className="text-gray-400 max-w-2xl mx-auto mb-12 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          Trusted by engineering teams at innovative companies around the world
+        </p>
+        
+        <div className="mt-10 grid md:grid-cols-3 gap-8">
+          {testimonials.map((t, index) => (
+            <div
               key={index}
-              quote={testimonial.quote}
-              author={testimonial.author}
-              role={testimonial.role}
-              company={testimonial.company}
-              delay={testimonial.delay}
-            />
+              className="p-8 bg-gray-800 rounded-xl shadow-xl transform hover:scale-105 transition-all duration-300 flex flex-col h-full animate-fade-in"
+              style={{ animationDelay: `${0.3 + index * 0.2}s` }}
+            >
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 rounded-full mr-4 relative overflow-hidden">
+                  <Image 
+                    src={t.image} 
+                    alt={`${t.name} avatar`} 
+                    width={48} 
+                    height={48}
+                    className="object-cover"
+                  />
+                </div>
+                <div className="text-left">
+                  <h3 className="text-green-500 font-bold">{t.name}</h3>
+                  <p className="text-gray-400 text-sm">{t.role}</p>
+                </div>
+              </div>
+              
+              <p className="text-gray-300 italic flex-grow text-left">"{t.quote}"</p>
+              
+              <div className="mt-6 pt-4 border-t border-gray-700">
+                <p className="text-gray-400 text-sm text-left">{t.company}</p>
+              </div>
+            </div>
           ))}
         </div>
         
-        <div className="mt-16 text-center animate-fade-in animation-delay-600">
-          <p className="text-gray-400 mb-4">Join hundreds of companies delivering better software, faster</p>
-          <button className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 transition-all duration-300 hover:scale-105">
-            Read More Success Stories
-          </button>
+        <div className="mt-16 animate-fade-in" style={{ animationDelay: '0.9s' }}>
+          <button className="btn-green">Read More Success Stories</button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

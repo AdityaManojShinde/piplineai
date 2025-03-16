@@ -51,6 +51,27 @@ PipelineAI is a modern, AI-driven CI/CD platform that revolutionizes your develo
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
+## Deployment on Vercel
+
+This project is configured for easy deployment on Vercel. Follow these steps:
+
+1. Push your code to a GitHub repository
+2. Go to [Vercel](https://vercel.com) and sign up or log in
+3. Click "New Project" and import your GitHub repository
+4. Keep the default settings (they're automatically detected from the project)
+5. Click "Deploy"
+
+The project includes:
+- `vercel.json` with optimized settings
+- SEO metadata in `app/layout.tsx`
+- Open Graph images for social sharing
+- Robots.txt and Sitemap.xml for search engines
+
+After deployment, update the URLs in:
+- `public/robots.txt`
+- `public/sitemap.xml`
+- `app/layout.tsx` (metadataBase and image URLs)
+
 ## Project Structure
 
 - `/app` - Next.js app directory with pages and layouts
