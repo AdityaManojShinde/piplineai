@@ -8,7 +8,7 @@ function exec(cmd) {
     execSync(cmd, { stdio: 'inherit' });
     return true;
   } catch (error) {
-    console.error(`Error executing ${cmd}:`, error);
+    console.error(`Error executing ${cmd}:`, error.message);
     return false;
   }
 }
@@ -33,9 +33,9 @@ async function build() {
     fs.writeFileSync('./package.json', JSON.stringify(packageJson, null, 2));
   }
   
-  // Install dependencies with force flag
+  // Install dependencies
   console.log('Installing dependencies...');
-  if (!exec('npm install --force')) {
+  if (!exec('npm install')) {
     process.exit(1);
   }
   
