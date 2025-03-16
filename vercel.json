@@ -2,7 +2,7 @@
   "version": 2,
   "buildCommand": "node build.js",
   "devCommand": "npm run dev",
-  "installCommand": false,
+  "installCommand": null,
   "framework": "nextjs",
   "outputDirectory": ".next",
   "github": {
