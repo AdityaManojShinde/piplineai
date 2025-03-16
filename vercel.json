@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "buildCommand": "node build.js",
+  "buildCommand": "npm run build",
   "devCommand": "npm run dev",
-  "installCommand": null,
+  "installCommand": "npm install --legacy-peer-deps",
   "framework": "nextjs",
   "outputDirectory": ".next",
   "github": {
