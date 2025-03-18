@@ -12,7 +12,7 @@ const testimonials = [
     company: "TechNova",
   },
   {
-    name: "Rudraksha",
+    name: "Rudraksh Malkauthekar",
     role: "Lead DevOps Engineer, CloudSphere",
     quote:
       "A must-have for any dev team serious about CI/CD. The AI-powered testing has caught critical bugs that would have otherwise made it to production.",
