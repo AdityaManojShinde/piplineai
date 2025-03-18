@@ -65,7 +65,7 @@ const HeroSection = () => {
         
         {/* Bot Icon - AI Analysis */}
         <div 
-          className="absolute right-[calc(50%-2rem)] top-[30%] opacity-70 animate-neon-pulse-subtle animation-delay-100"
+          className="absolute right-[calc(40%-2rem)] top-[33%] opacity-70 animate-neon-pulse-subtle animation-delay-100"
           style={{ 
             transform: `translateY(${scrollY * 0.15}px) translateX(${mousePosition.x * -15}px)`,
             transition: 'transform 0.3s ease-out'
@@ -87,7 +87,7 @@ const HeroSection = () => {
         
         {/* Rocket Icon - Deployment */}
         <div 
-          className="absolute right-[calc(50%-2rem)] top-[60%] opacity-70 animate-neon-pulse-subtle animation-delay-300"
+          className="absolute right-[calc(40%-2rem)] top-[63%] opacity-70 animate-neon-pulse-subtle animation-delay-300"
           style={{ 
             transform: `translateY(${scrollY * 0.25}px) translateX(${mousePosition.y * 20}px)`,
             transition: 'transform 0.3s ease-out'
@@ -98,7 +98,7 @@ const HeroSection = () => {
         
         {/* Horizontal Connection Lines */}
         <div 
-          className="absolute right-[calc(50%-1rem)] top-[30%] w-6 h-1 bg-green-500 rounded-full opacity-50 animate-neon-pulse-subtle animation-delay-100"
+          className="absolute right-[calc(51%-1rem)] top-[30%] w-6 h-1 bg-green-500 rounded-full opacity-50 animate-neon-pulse-subtle animation-delay-100"
           style={{ 
             transform: `translateY(${scrollY * 0.15}px) scaleX(${1 + mousePosition.x * 0.5})`,
             transition: 'transform 0.3s ease-out'
@@ -106,7 +106,7 @@ const HeroSection = () => {
         ></div>
         
         <div 
-          className="absolute right-[calc(50%-1rem)] top-[45%] w-6 h-1 bg-green-500 rounded-full opacity-50 animate-neon-pulse-subtle animation-delay-200"
+          className="absolute right-[calc(51%-1rem)] top-[45%] w-6 h-1 bg-green-500 rounded-full opacity-50 animate-neon-pulse-subtle animation-delay-200"
           style={{ 
             transform: `translateY(${scrollY * 0.2}px) scaleX(${1 - mousePosition.y * 0.5})`,
             transition: 'transform 0.3s ease-out'
@@ -114,7 +114,7 @@ const HeroSection = () => {
         ></div>
         
         <div 
-          className="absolute right-[calc(50%-1rem)] top-[60%] w-6 h-1 bg-green-500 rounded-full opacity-50 animate-neon-pulse-subtle animation-delay-300"
+          className="absolute right-[calc(51%-1rem)] top-[60%] w-6 h-1 bg-green-500 rounded-full opacity-50 animate-neon-pulse-subtle animation-delay-300"
           style={{ 
             transform: `translateY(${scrollY * 0.25}px) scaleX(${1 + mousePosition.x * 0.5})`,
             transition: 'transform 0.3s ease-out'
