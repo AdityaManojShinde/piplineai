@@ -31,13 +31,7 @@ const PricingTier: React.FC<PricingTierProps> = ({
       animation: `fadeIn 0.6s ease-out ${delay * 0.001}s forwards`,
     }}
   >
-    {highlighted && (
-      <div className="absolute top-0 inset-x-0 transform -translate-y-1/2">
-        <span className="inline-flex rounded-full bg-green-500 px-4 py-1 text-sm font-semibold tracking-wider uppercase text-white shadow-lg">
-          Most Popular
-        </span>
-      </div>
-    )}
+   
     <div
       className={`px-8 py-10 ${highlighted ? "bg-gray-800" : "bg-gray-900"}`}
     >
